@@ -59,6 +59,7 @@ class User {
         return $i;
     }
 
+    
     public function getUserReservation()
     {
         echo "<h2>Réservations de l'utilisateur " . $this . '</h2><p class="green reservation">' .

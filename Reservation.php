@@ -5,7 +5,6 @@ class Reservation {
     private $_user;
     private $_room;
     private $_hotel;
-
         
     public function __construct($beggining,$end,User $user,Room $room,Hotel $hotel){
         $this->_dateBeg = $beggining;
