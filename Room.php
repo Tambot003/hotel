@@ -9,7 +9,7 @@ class Room {
     private $_reservations;
         
     
-    public function __construct($name,$price,$bedNb,$hotel){
+    public function __construct(string $name,$price,$bedNb,$hotel){
         $this->_name = $name;
         $this->_price = $price;
         $this->_bedNb = $bedNb;

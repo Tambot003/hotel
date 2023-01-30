@@ -133,10 +133,15 @@ class Hotel
         echo "</tbody></table>";
     }
 
+    // public function __toString()
+    // {
+    //     return $this->getName();
+    // }
     public function __toString()
     {
-        return $this->getName();
+        return $this->name . $this->adress;
     }
+
 }
 //___________________________________________________________________  
 
