@@ -33,6 +33,10 @@ class Hotel
     {
         $this->_name = $name;
     }
+    public function setadress ($adress)
+    {
+        $this->_name = $adress;
+    }
 
 
     public function addReserv($reservation)
