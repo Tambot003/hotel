@@ -1,12 +1,12 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Poo Hotel</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id= "container">
-<h1>Hotel</h1>
+
 
 <?php
  spl_autoload_register(function ($class_name) {
@@ -16,11 +16,11 @@
 });
 
 
-$hotel1 = new Hotel("HiltonStrasbourg","10 route de la Gare 67000 Strasbourg");
-$hotel2 = new Hotel("Regent **** Paris","10 rue du Garage 67000 Strasbourg");
+$hotel1 = new Hotel("HiltonStrasbourg","202 Rue Colmar");
+$hotel2 = new Hotel("Regent **** paris","202 rue de la foret blanc");
 
-$user1 = new User("Virgile","GIBELLO","Homme","01-01-2000");
-$user2 = new User("Micka","MURMANN","Homme","02-02-2001");
+$user1 = new User("Virgile","GIBELLO","Homme","01-01-19980");
+$user2 = new User("Micka","MURMANN","Homme","02-02-2002");
 
 
 $chambre1 = new Room("Chambre 1",120,2,$hotel1);
