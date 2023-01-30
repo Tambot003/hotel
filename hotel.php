@@ -8,8 +8,9 @@ class Hotel
 
     public function __construct($name, $adress)
     {
-        //remplace "*" by a star logo on the hotel's name
-        $newName = str_replace("*","⭐",$name);
+
+        $newName = str_replace("*", "*", $name);
+
         $this->_name = $newName;
         $this->_adress = $adress;
 
@@ -34,8 +35,9 @@ class Hotel
     }
 
 
-    public function addReserv($reservation){
-        array_push($this->_reservations,$reservation);
+    public function addReserv($reservation)
+    {
+        array_push($this->_reservations, $reservation);
     }
 
     public function addRoom($newRoom)
@@ -74,20 +76,21 @@ class Hotel
         echo "<h2>Réservations de l'hôtel " . $this->getName() . '</h2>';
         if ($this->countReservedRooms() > 0) {
             echo '<p class="green reservation">' . $this->countReservedRooms() . " RÉSERVATION";
-        // rajouté un S pour le pluriels
-        if ($this->countReservedRooms() > 1) {
-            echo "S";
-        };
-        echo "</p>";
-        foreach ($this->_reservations as $reserv) {
-
-            echo '<p><bold class="bold">' . $reserv->getUser() . "</bold> - " . $reserv->getRoom()->getName() . " - du " . $reserv->getDateBegging() . " au " . $reserv->getDateEnd() . "</p>";
-            if ($reserv->getRoom()->getDisponibility() == false) {
+            // rajouté un S pour le pluriels
+            if ($this->countReservedRooms() > 1) {
+                echo "S";
             }
+            ;
+            echo "</p>";
+            foreach ($this->_reservations as $reserv) {
+
+                echo '<p><bold class="bold">' . $reserv->getUser() . "</bold> - " . $reserv->getRoom()->getName() . " - du " . $reserv->getDateBegging() . " au " . $reserv->getDateEnd() . "</p>";
+                if ($reserv->getRoom()->getDisponibility() == false) {
+                }
+            }
+        } else {
+            echo "<p>Aucune réservation</p>";
         }
-    } else {
-        echo"<p>Aucune réservation</p>";
-    }
     }
 
     public function listRoom()
@@ -111,26 +114,24 @@ class Hotel
                 . $room->getPrice() . " €" .
                 "</td>
                     <td>";
-                if ($room->getWifi() == true)
-                {
-                    echo "&#x1f4f6";//wifi logo
-                }
-                echo "</td>
+            if ($room->getWifi() == true) {
+                echo "&#x1f4f6"; //wifi logo
+            }
+            echo "</td>
                     <td>";
-                if ($room->getDisponibility() == true)
-                {
-                    echo '<p class="green">Disponible</p>';
-                } else 
-                {
-                    echo '<p class="red">Réservée</p>';
-                }
-                echo "</td>
+            if ($room->getDisponibility() == true) {
+                echo '<p class="green">Disponible</p>';
+            } else {
+                echo '<p class="red">Réservée</p>';
+            }
+            echo "</td>
                 </tr>";
         }
         echo "</tbody></table>";
     }
 
-    public function __toString(){
+    public function __toString()
+    {
         return $this->getName();
     }
 }

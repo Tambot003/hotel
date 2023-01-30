@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id= "container">
+   
 
 
 <?php
@@ -23,14 +23,14 @@ $user1 = new User("Virgile","GIBELLO","Homme","01-01-19980");
 $user2 = new User("Micka","MURMANN","Homme","02-02-2002");
 
 
-$chambre1 = new Room("Chambre 1",120,2,$hotel1);
-$chambre2 = new Room("Chambre 2",120,2,$hotel1);
-$chambre3 = new Room("Chambre 3",120,2,$hotel1);
+$chambre1 = new Room("Chambre 1",110,2,$hotel1);
+$chambre2 = new Room("Chambre 2",100,2,$hotel1);
+$chambre3 = new Room("Chambre 3",90,2,$hotel1);
 
-$chambre16 = new Room("Chambre 16",300,2,$hotel1);
-$chambre17 = new Room("Chambre 17",300,2,$hotel1);
-$chambre18 = new Room("Chambre 18",300,2,$hotel1);
-$chambre19 = new Room("Chambre 19",300,2,$hotel1);
+$chambre16 = new Room("Chambre 16",250,2,$hotel1);
+$chambre17 = new Room("Chambre 17",240,2,$hotel1);
+$chambre18 = new Room("Chambre 18",230,2,$hotel1);
+$chambre19 = new Room("Chambre 19",220,2,$hotel1);
 
 //activated the wifi for the room n°3 & 16
 $chambre3->setWifi(true);
