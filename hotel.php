@@ -8,7 +8,6 @@ class Hotel
 
     public function __construct($name, $adress)
     {
-
         $newName = str_replace("*", "*", $name);
 
         $this->_name = $newName;
@@ -33,7 +32,7 @@ class Hotel
     {
         $this->_name = $name;
     }
-    public function setadress ($adress)
+    public function setadress($adress)
     {
         $this->_name = $adress;
     }
